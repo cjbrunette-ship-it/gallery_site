@@ -1,0 +1,141 @@
+.navbar {
+   box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #f2e6df;
+}
+
+.site-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+img {
+    width: 400px;
+    height: auto; 
+}
+
+.artwork-layout {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+.artwork-layout img {
+    display: block;
+    flex: 0 1 400px;
+    width: 100%;
+    min-width: 0;
+}
+
+.artwork-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-copy {
+    text-align: left;
+}
+
+body {
+    background-color: #4F748C;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    padding: 8px 12px;
+    color: #222;
+    background-color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: #e3cfc3;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.gallery a {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery a::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    background: url("img/frame_image.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+}
+
+.gallery + p {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px;
+    text-align: center;
+    color: #f2e6df;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .artwork-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .artwork-layout img {
+        align-self: center;
+        max-width: 400px;
+    }
+}
+
+p {
+    color: #f2e6df;
+    font-size: 14 px;
+    text-align: center; 
+}
+
+h1 {
+    color: #f2e6df;
+    font-size: 50px;
+    text-align: center;
+}
+
+label {
+    color: #f2e6df;
+}
+
+ul {
+    color: #f2e6df;
+}
